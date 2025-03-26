@@ -1,0 +1,10 @@
+services:
+  join:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: join
+    tty: true
+    command: /bin/sh -c "while :; do sleep 10; done"
+    volumes:
+      - ./:/src
